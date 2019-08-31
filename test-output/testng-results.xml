@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17720" started-at="2019-08-31T08:17:24Z" finished-at="2019-08-31T08:17:42Z">
+  <suite name="Harmony QA Test Automation Test Suite" duration-ms="12184" started-at="2019-08-31T13:54:57Z" finished-at="2019-08-31T13:55:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17720" started-at="2019-08-31T08:17:24Z" finished-at="2019-08-31T08:17:42Z">
+    <test name="Harmony QA Test Cases" duration-ms="12184" started-at="2019-08-31T13:54:57Z" finished-at="2019-08-31T13:55:09Z">
       <class name="com.harmony.qa.tests.LoginPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.harmony.qa.tests.LoginPageTest@4883b407]" name="setup" is-config="true" duration-ms="7724" started-at="2019-08-31T13:47:24Z" finished-at="2019-08-31T13:47:32Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.harmony.qa.tests.LoginPageTest@7d9d1a19]" name="setup" is-config="true" duration-ms="7153" started-at="2019-08-31T19:24:57Z" finished-at="2019-08-31T19:25:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="validLogin()[pri:0, instance:com.harmony.qa.tests.LoginPageTest@4883b407]" name="validLogin" duration-ms="9857" started-at="2019-08-31T13:47:32Z" finished-at="2019-08-31T13:47:42Z">
+        <test-method status="PASS" signature="validLogin()[pri:0, instance:com.harmony.qa.tests.LoginPageTest@7d9d1a19]" name="validLogin" duration-ms="4891" started-at="2019-08-31T19:25:04Z" finished-at="2019-08-31T19:25:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLogin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.harmony.qa.tests.LoginPageTest@4883b407]" name="tearDown" is-config="true" duration-ms="115" started-at="2019-08-31T13:47:42Z" finished-at="2019-08-31T13:47:42Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.harmony.qa.tests.LoginPageTest@7d9d1a19]" name="tearDown" is-config="true" duration-ms="120" started-at="2019-08-31T19:25:09Z" finished-at="2019-08-31T19:25:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.harmony.qa.tests.LoginPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Harmony QA Test Cases -->
+  </suite> <!-- Harmony QA Test Automation Test Suite -->
 </testng-results>

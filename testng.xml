@@ -2,14 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Harmony QA Test Automation Test Suite">
 
-
+	<listeners>
+		<listener class-name="com.harmony.qa.listner.ExtentReportListner"/>
+	</listeners>
 
 	<test name="Harmony QA Test Cases">
 		<classes>
-			<class name="com.qa.toolsqa.testcases.AboutUsPageTest"></class>
-			<class name="com.qa.toolsqa.testcases.HomePageTest"></class>
-			<class name="com.qa.toolsqa.testcases.RegistrationPageTest"></class>
-
+			<class name="com.harmony.qa.tests.LoginPageTest"></class>
 		</classes>
 	</test>
 </suite>

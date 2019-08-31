@@ -12,7 +12,7 @@ public class LoginPage extends TestBase
 	String loginButtonXpath = "//input[@name='CtrlLogin1$cmdLogin']";
 	String logOutButtonXpath = "//input[@name='ctrlTopMenu1$cmdSignOut1']";
 
-	public void login(String username, String password)
+	public HomePage login(String username, String password)
 	{
 		try
 		{
@@ -28,8 +28,7 @@ public class LoginPage extends TestBase
 		{
 			try
 			{
-				System.out
-						.println("Login Fails on 1st attempt, Trying to login again"
+				System.out.println("Login Fails on 1st attempt, Trying to login again"
 								+ e.getMessage().toString());
 				driver.findElement(By.xpath(userNameXpath)).clear();
 				driver.findElement(By.xpath(userNameXpath)).sendKeys(username);
@@ -38,11 +37,11 @@ public class LoginPage extends TestBase
 				driver.findElement(By.xpath(loginButtonXpath)).click();
 			} catch (Exception exp)
 			{
-				System.out.println("Login into application Fails in login page"
-						+ e.getMessage().toString());
+				System.out.println("Login into application Fails in login page "+ e.getMessage().toString());
 			}
 		}
 		System.out.println("Logged into wellsky application");
+		return new HomePage();
 	}
 
 	public boolean isAlreadyLogin()
