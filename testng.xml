@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Harmony QA Test Automation Test Suite">
+
+
+
+	<test name="Harmony QA Test Cases">
+		<classes>
+			<class name="com.qa.toolsqa.testcases.AboutUsPageTest"></class>
+			<class name="com.qa.toolsqa.testcases.HomePageTest"></class>
+			<class name="com.qa.toolsqa.testcases.RegistrationPageTest"></class>
+
+		</classes>
+	</test>
+</suite>

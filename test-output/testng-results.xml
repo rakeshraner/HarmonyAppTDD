@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="17720" started-at="2019-08-31T08:17:24Z" finished-at="2019-08-31T08:17:42Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="17720" started-at="2019-08-31T08:17:24Z" finished-at="2019-08-31T08:17:42Z">
+      <class name="com.harmony.qa.tests.LoginPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.harmony.qa.tests.LoginPageTest@4883b407]" name="setup" is-config="true" duration-ms="7724" started-at="2019-08-31T13:47:24Z" finished-at="2019-08-31T13:47:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="validLogin()[pri:0, instance:com.harmony.qa.tests.LoginPageTest@4883b407]" name="validLogin" duration-ms="9857" started-at="2019-08-31T13:47:32Z" finished-at="2019-08-31T13:47:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.harmony.qa.tests.LoginPageTest@4883b407]" name="tearDown" is-config="true" duration-ms="115" started-at="2019-08-31T13:47:42Z" finished-at="2019-08-31T13:47:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.harmony.qa.tests.LoginPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
