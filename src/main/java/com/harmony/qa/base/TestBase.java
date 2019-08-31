@@ -56,6 +56,7 @@ public class TestBase
 		if (driver != null)
 		{
 			driver.close();
+			System.out.println("Browser current tab closed");
 		}
 	}
 
@@ -64,7 +65,7 @@ public class TestBase
 		if (driver != null)
 		{
 			driver.quit();
-			System.out.println();
+			System.out.println("Browser Quite");
 		}
 	}
 

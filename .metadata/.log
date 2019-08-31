@@ -1,0 +1,16 @@
+!SESSION 2019-08-31 18:43:19.755 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/rakeshrane/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/rakeshrane/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2019-08-31 18:43:44.369
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.jobs 2 2 2019-08-31 18:44:06.890
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.rse.internal.core.RSEInitJob
+
+!ENTRY org.eclipse.core.jobs 2 2 2019-08-31 18:44:06.892
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.rse.internal.ui.RSEUIInitJob
