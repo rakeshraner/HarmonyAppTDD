@@ -9,13 +9,19 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.log4testng.Logger;
+
+import com.harmony.qa.listner.WebEventListener;
 
 public class TestBase
 {
 	protected static Properties prop;
 	protected static WebDriver driver;
 	protected static Logger log= Logger.getLogger(TestBase.class);
+	public  static EventFiringWebDriver e_driver;
+	public static WebEventListener eventListener;
+
 
 	public TestBase()
 	{
@@ -46,6 +52,12 @@ public class TestBase
 			driver = new FirefoxDriver();
 			log.info("Firefox Driver launched ");
 		}
+		
+		e_driver = new EventFiringWebDriver(driver);
+		eventListener = new WebEventListener();
+		e_driver.register(eventListener);
+		driver = e_driver;
+		
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
