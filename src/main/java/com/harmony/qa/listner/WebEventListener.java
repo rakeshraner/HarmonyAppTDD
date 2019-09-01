@@ -1,5 +1,7 @@
 package com.harmony.qa.listner;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
@@ -7,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
 import com.harmony.qa.base.TestBase;
+import com.harmony.qa.utility.AfterTestActions;
 
 
 public class WebEventListener extends TestBase implements WebDriverEventListener {
@@ -53,11 +56,11 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 
 	public void onException(Throwable error, WebDriver driver) {
 		System.out.println("Exception occured: " + error);
-		/*try {
-			TestUtil.takeScreenshotAtEndOfTest();
+		try {
+			AfterTestActions.takeScreenshotAtEndOfTest();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}*/
+		}
 	}
 
 	public void beforeFindBy(By by, WebElement element, WebDriver driver) {
