@@ -19,12 +19,14 @@ public class LoginPageTest extends TestBase
 	public void setup()
 	{
 		TestBase.launchApp();
+		log.info("Application gets launched");
 	}
 
 	@Test
 	public void validLogin()
 	{
 		homePage =loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		log.info("Login Successful");
 		assertTrue(loginPage.isAlreadyLogin());
 	}
 

@@ -9,27 +9,27 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.log4testng.Logger;
 
 public class TestBase
 {
 	protected static Properties prop;
 	protected static WebDriver driver;
+	protected static Logger log= Logger.getLogger(TestBase.class);
 
 	public TestBase()
 	{
 		try
 		{
 			prop = new Properties();
-			FileInputStream fis = new FileInputStream(
-					"//Users//rakeshrane//HarmonyQA//HarmonyQA//src//main//java//com//harmony//qa//data//config.properties");
+			FileInputStream fis = new FileInputStream("//Users//rakeshrane//HarmonyQA//HarmonyQA//src//main//java//com//harmony//qa//data//config.properties");
 			prop.load(fis);
 		} catch (FileNotFoundException ex)
 		{
-			System.out.println("File Not found exception "
-					+ ex.getMessage().toString());
+			log.info("File Not found exception "+ ex.getMessage().toString());
 		} catch (IOException e)
 		{
-			System.out.println("IO exception " + e.getMessage().toString());
+			log.info("IO exception " + e.getMessage().toString());
 		}
 	}
 
@@ -39,10 +39,12 @@ public class TestBase
 		{
 			System.setProperty("webdriver.chrome.driver", "/Users/rakeshrane/Tools/chromedriver");
 			driver = new ChromeDriver();
+			log.info("Chrome Driver launched ");
 		} else if (prop.getProperty("browser").contains("firefox"))
 		{
 			System.setProperty("webdriver.gecko.driver", "/Users/rakeshrane/Tools/geckodriver");
 			driver = new FirefoxDriver();
+			log.info("Firefox Driver launched ");
 		}
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
@@ -56,7 +58,7 @@ public class TestBase
 		if (driver != null)
 		{
 			driver.close();
-			System.out.println("Browser current tab closed");
+			log.info("Browser current tab closed");
 		}
 	}
 
@@ -65,7 +67,7 @@ public class TestBase
 		if (driver != null)
 		{
 			driver.quit();
-			System.out.println("Browser Quite");
+			log.info("Browser Quite");
 		}
 	}
 
