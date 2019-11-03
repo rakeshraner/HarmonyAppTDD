@@ -3,6 +3,7 @@ package com.harmony.qa.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.harmony.qa.base.TestBase;
 
 public class LoginPage extends TestBase
@@ -11,7 +12,7 @@ public class LoginPage extends TestBase
 	String passwordXpath = "//input[@name='CtrlLogin1$txtPassword']";
 	String loginButtonXpath = "//input[@name='CtrlLogin1$cmdLogin']";
 	String logOutButtonXpath = "//input[@name='ctrlTopMenu1$cmdSignOut1']";
-
+	
 	public HomePage login(String username, String password)
 	{
 		try

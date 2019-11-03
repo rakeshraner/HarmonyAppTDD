@@ -18,10 +18,9 @@ public class TestBase
 {
 	protected static Properties prop;
 	protected static WebDriver driver;
-	protected static Logger log= Logger.getLogger(TestBase.class);
-	public  static EventFiringWebDriver e_driver;
+	protected static Logger log = Logger.getLogger(TestBase.class);
+	public static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
-
 
 	public TestBase()
 	{
@@ -32,7 +31,7 @@ public class TestBase
 			prop.load(fis);
 		} catch (FileNotFoundException ex)
 		{
-			log.info("File Not found exception "+ ex.getMessage().toString());
+			log.info("File Not found exception " + ex.getMessage().toString());
 		} catch (IOException e)
 		{
 			log.info("IO exception " + e.getMessage().toString());
@@ -52,7 +51,7 @@ public class TestBase
 			driver = new FirefoxDriver();
 			log.info("Firefox Driver launched ");
 		}
-		
+
 		e_driver = new EventFiringWebDriver(driver);
 		eventListener = new WebEventListener();
 		e_driver.register(eventListener);
