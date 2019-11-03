@@ -1,21 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Harmony QA Test Automation Test Suite" duration-ms="11475" started-at="2019-11-03T07:42:21Z" finished-at="2019-11-03T07:42:33Z">
+  <suite name="Harmony QA Test Automation Test Suite" duration-ms="211161" started-at="2019-11-03T14:38:32Z" finished-at="2019-11-03T14:42:03Z">
     <groups>
     </groups>
-    <test name="Harmony QA Test Cases" duration-ms="11475" started-at="2019-11-03T07:42:21Z" finished-at="2019-11-03T07:42:33Z">
-      <class name="com.harmony.qa.tests.LoginPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.harmony.qa.tests.LoginPageTest@553f17c]" name="setup" is-config="true" duration-ms="7372" started-at="2019-11-03T13:12:21Z" finished-at="2019-11-03T13:12:29Z">
+    <test name="Harmony QA Test Cases" duration-ms="211161" started-at="2019-11-03T14:38:32Z" finished-at="2019-11-03T14:42:03Z">
+      <class name="com.harmony.qa.tests.HomePageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.harmony.qa.tests.HomePageTest@271053e1]" name="setup" is-config="true" duration-ms="23294" started-at="2019-11-03T20:09:03Z" finished-at="2019-11-03T20:09:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="validLogin()[pri:0, instance:com.harmony.qa.tests.LoginPageTest@553f17c]" name="validLogin" duration-ms="3888" started-at="2019-11-03T13:12:29Z" finished-at="2019-11-03T13:12:32Z">
+        <test-method status="PASS" signature="verifyNewsPage()[pri:0, instance:com.harmony.qa.tests.HomePageTest@271053e1]" name="verifyNewsPage" duration-ms="4389" started-at="2019-11-03T20:09:26Z" finished-at="2019-11-03T20:09:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNewsPage -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.harmony.qa.tests.HomePageTest@271053e1]" name="teardown" is-config="true" duration-ms="220" started-at="2019-11-03T20:09:31Z" finished-at="2019-11-03T20:09:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.harmony.qa.tests.HomePageTest@271053e1]" name="setup" is-config="true" duration-ms="21918" started-at="2019-11-03T20:09:31Z" finished-at="2019-11-03T20:09:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyOrganizationPage()[pri:0, instance:com.harmony.qa.tests.HomePageTest@271053e1]" name="verifyOrganizationPage" duration-ms="7839" started-at="2019-11-03T20:09:53Z" finished-at="2019-11-03T20:10:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyOrganizationPage -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.harmony.qa.tests.HomePageTest@271053e1]" name="teardown" is-config="true" duration-ms="301" started-at="2019-11-03T20:10:01Z" finished-at="2019-11-03T20:10:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.harmony.qa.tests.HomePageTest@271053e1]" name="setup" is-config="true" duration-ms="21628" started-at="2019-11-03T20:10:01Z" finished-at="2019-11-03T20:10:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyPanelPage()[pri:0, instance:com.harmony.qa.tests.HomePageTest@271053e1]" name="verifyPanelPage" duration-ms="11429" started-at="2019-11-03T20:10:23Z" finished-at="2019-11-03T20:10:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPanelPage -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.harmony.qa.tests.HomePageTest@271053e1]" name="teardown" is-config="true" duration-ms="238" started-at="2019-11-03T20:10:34Z" finished-at="2019-11-03T20:10:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.harmony.qa.tests.HomePageTest@271053e1]" name="setup" is-config="true" duration-ms="24097" started-at="2019-11-03T20:10:34Z" finished-at="2019-11-03T20:10:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyTrainingPage()[pri:0, instance:com.harmony.qa.tests.HomePageTest@271053e1]" name="verifyTrainingPage" duration-ms="1076" started-at="2019-11-03T20:10:59Z" finished-at="2019-11-03T20:11:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTrainingPage -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.harmony.qa.tests.HomePageTest@271053e1]" name="teardown" is-config="true" duration-ms="265" started-at="2019-11-03T20:11:00Z" finished-at="2019-11-03T20:11:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.harmony.qa.tests.HomePageTest@271053e1]" name="setup" is-config="true" duration-ms="29976" started-at="2019-11-03T20:11:00Z" finished-at="2019-11-03T20:11:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyUserPage()[pri:0, instance:com.harmony.qa.tests.HomePageTest@271053e1]" name="verifyUserPage" duration-ms="7339" started-at="2019-11-03T20:11:30Z" finished-at="2019-11-03T20:11:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserPage -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.harmony.qa.tests.HomePageTest@271053e1]" name="teardown" is-config="true" duration-ms="290" started-at="2019-11-03T20:11:37Z" finished-at="2019-11-03T20:11:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.harmony.qa.tests.HomePageTest@271053e1]" name="setup" is-config="true" duration-ms="25593" started-at="2019-11-03T20:11:37Z" finished-at="2019-11-03T20:12:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyWellskyLogo()[pri:0, instance:com.harmony.qa.tests.HomePageTest@271053e1]" name="verifyWellskyLogo" duration-ms="67" started-at="2019-11-03T20:12:03Z" finished-at="2019-11-03T20:12:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWellskyLogo -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.harmony.qa.tests.HomePageTest@271053e1]" name="teardown" is-config="true" duration-ms="228" started-at="2019-11-03T20:12:03Z" finished-at="2019-11-03T20:12:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.harmony.qa.tests.HomePageTest -->
+      <class name="com.harmony.qa.tests.LoginPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.harmony.qa.tests.LoginPageTest@4f7d0008]" name="setup" is-config="true" duration-ms="13343" started-at="2019-11-03T20:08:32Z" finished-at="2019-11-03T20:08:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="validLogin()[pri:0, instance:com.harmony.qa.tests.LoginPageTest@4f7d0008]" name="validLogin" duration-ms="17273" started-at="2019-11-03T20:08:46Z" finished-at="2019-11-03T20:09:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLogin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.harmony.qa.tests.LoginPageTest@553f17c]" name="tearDown" is-config="true" duration-ms="186" started-at="2019-11-03T13:12:32Z" finished-at="2019-11-03T13:12:33Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.harmony.qa.tests.LoginPageTest@4f7d0008]" name="tearDown" is-config="true" duration-ms="287" started-at="2019-11-03T20:09:03Z" finished-at="2019-11-03T20:09:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

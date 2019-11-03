@@ -15,10 +15,10 @@ public class LoginPage extends TestBase
 	WaitHelper wait=new WaitHelper();
 	GenericHelper generic=new GenericHelper();
 	
-	protected By userNameXpath =By.xpath("//input[@name='CtrlLogin1$txtUserName']");
-	protected By passwordXpath =By.xpath("//input[@name='CtrlLogin1$txtPassword']");
-	protected By loginButtonXpath =By.xpath("//input[@name='CtrlLogin1$cmdLogin']");
-	protected By logOutButtonXpath =By.xpath("//input[@name='ctrlTopMenu1$cmdSignOut1']");
+	protected By userNameXpath =By.xpath("//input[contains(@name,'UsernameTextBox')]");
+	protected By passwordXpath =By.xpath("//input[contains(@name,'PasswordTextBox')]");
+	protected By loginButtonXpath =By.xpath("//input[contains(@name,'SignIn')]");
+	protected By profileButtonXpath =By.xpath("//span[contains(text(),'istretch01@agingnetwork.com')]");
 	
 	public HomePage login(String username, String password)
 	{
@@ -27,7 +27,7 @@ public class LoginPage extends TestBase
 			textbox.clearAndSendKeys(userNameXpath, username);
 			textbox.clearAndSendKeys(passwordXpath, password);
 			button.click(loginButtonXpath);
-			wait.elementExistAndVisible(logOutButtonXpath, 60, 10);
+			wait.elementExistAndVisible(profileButtonXpath, 60, 10);
 		} catch (Exception e)
 		{
 			try
@@ -48,14 +48,11 @@ public class LoginPage extends TestBase
 	public boolean isAlreadyLogin()
 	{
 		boolean flag = false;
-		if (generic.IsElementPresentQuick(logOutButtonXpath))
+		if (generic.IsElementPresentQuick(profileButtonXpath))
 		{
 			log.info("User is already logged In");
 			flag = true;
-		} else
-		{
-			flag = false;
-		}
+		} 
 		return flag;
 	}
 

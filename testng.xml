@@ -9,6 +9,7 @@
 	<test name="Harmony QA Test Cases">
 		<classes>
 			<class name="com.harmony.qa.tests.LoginPageTest"></class>
+			<class name="com.harmony.qa.tests.HomePageTest"></class>
 		</classes>
 	</test>
 </suite>
