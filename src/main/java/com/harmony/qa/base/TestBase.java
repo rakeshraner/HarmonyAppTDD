@@ -27,7 +27,7 @@ public class TestBase
 		try
 		{
 			prop = new Properties();
-			FileInputStream fis = new FileInputStream("//Users//rakeshrane//HarmonyQA//HarmonyQA//src//main//java//com//harmony//qa//data//config.properties");
+			FileInputStream fis = new FileInputStream("//Users//rakeshrane//Documents//HarmonyQA//HarmonyQA//src//main//java//com//harmony//qa//datareader//config.properties");
 			prop.load(fis);
 		} catch (FileNotFoundException ex)
 		{
