@@ -51,20 +51,16 @@ public class TestBase
 			driver = new FirefoxDriver();
 			log.info("Firefox Driver launched ");
 		}
-
-		e_driver = new EventFiringWebDriver(driver);
-		eventListener = new WebEventListener();
-		e_driver.register(eventListener);
-		driver = e_driver;
-		
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("appURL"));
+		log.info("Browser launched and application gets loaded");
+
 	}
 
-	protected void closeBrowserWindow()
+	protected static void closeBrowserWindow()
 	{
 		if (driver != null)
 		{
@@ -73,7 +69,7 @@ public class TestBase
 		}
 	}
 
-	protected void quiteBrowser()
+	protected static void quiteBrowser()
 	{
 		if (driver != null)
 		{

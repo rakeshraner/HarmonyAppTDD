@@ -16,11 +16,11 @@ public class ExcelReader extends TestBase
 	protected static XSSFWorkbook wb;
 	protected static DataFormatter formatter = new DataFormatter();
 
-	public static Object[][] getData(String sheetName)
+	public static Object[][] getData(String sheetName, String path)
 	{
 		try
 		{
-			fis = new FileInputStream("//Users//rakeshrane//HarmonyQA//HarmonyQA//src//main//java//dataSource//Credentials.xlsx");
+			fis = new FileInputStream(path);
 			wb = new XSSFWorkbook(fis);
 		} catch (FileNotFoundException e)
 		{

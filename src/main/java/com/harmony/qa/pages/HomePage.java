@@ -31,10 +31,10 @@ public class HomePage extends TestBase
 		return new OrganizationPage();
 	}
 	
-	public UserPage clickOnUserLink()
+	public UserListPage clickOnUserLink()
 	{
 		button.click(userLink);
-		return new UserPage();
+		return new UserListPage();
 	}
 	
 	public TrainingPage clickOnTrainingLink()
