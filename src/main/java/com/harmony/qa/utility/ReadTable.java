@@ -29,10 +29,5 @@ public class ReadTable extends TestBase{
 		return columnValue;			
 	}
 
-	public static void main(String[] args) {
-
-		System.out.println(readDynamicWebTable(tableXpath));
-		
-	}
 
 }

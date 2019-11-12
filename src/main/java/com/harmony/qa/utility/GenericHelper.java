@@ -119,4 +119,5 @@ public class GenericHelper extends TestBase
 		}
 		return columnValue;			
 	}
+	
 }

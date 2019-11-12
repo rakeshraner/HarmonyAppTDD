@@ -1,12 +1,17 @@
 package com.harmony.qa.pages;
 
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import com.harmony.qa.base.TestBase;
 import com.harmony.qa.utility.ButtonHelper;
 import com.harmony.qa.utility.DropdownHelper;
 import com.harmony.qa.utility.GenericHelper;
 import com.harmony.qa.utility.NavigationHelper;
+import com.harmony.qa.utility.TextBoxHelper;
 import com.harmony.qa.utility.WaitHelper;
 
 public class UserListPage extends TestBase 
@@ -16,6 +21,7 @@ public class UserListPage extends TestBase
 	ButtonHelper button=new ButtonHelper();
 	GenericHelper generic=new GenericHelper();
 	WaitHelper wait=new WaitHelper();
+	TextBoxHelper textBox=new TextBoxHelper();
 	
 	private By addUserButton=By.xpath("//a[contains(@id,'btnAdd')]");
     private By exportUserButton=By.xpath("//a[contains(@id,'btnImport')]");
@@ -31,6 +37,7 @@ public class UserListPage extends TestBase
     private By includeChildOrgChk=By.xpath("//input[contains(@id,'chkIncludeChildOrgUser')]");
     private By showInactiveChk=By.xpath("//input[contains(@id,'chkShowInactives')]");
     private By ResetButton=By.xpath("//input[contains(@id,'btnReset')]");
+    private By userListTable=By.xpath("//table[contains(@id,'rgUserList')]");
     
 	public String userPageUrl()
 	{
@@ -69,13 +76,49 @@ public class UserListPage extends TestBase
 		return new LicenseSummaryPage();
 	}
 
+	public void clickOnEditUserButtonWithXpath(String userName)
+	{
+		try {
+			WebElement ele =driver.findElement(By.xpath("//tr[@class='rgRow']//td[text()'"+userName+"']/following-sibling::td//input[contains(@id,'imgbtnEdit')]"));	
+			System.out.println(ele);
+			List<WebElement> pagination = driver.findElements(By.xpath("//div[@class = 'rgWrap rgNumPart']//a"));
+			int s = pagination.size();
+			 for(int i=0;i<=s;i++)
+			    {
+			       if(ele.isDisplayed())
+			    	{
+			    	   log.info("Element Found in List");
+			    	   ele.click();
+			    	   log.info("clicked On Element");
+			    		break;
+			    	}			        	
+			     }
+		} catch (Exception e) {
+			log.info("Element NOt found " +e.getMessage().toString());
+		} 
+	}
 	
 	
+	public void clickOnEditUserButton(String orgName, String userNameToEdit)
+	{
+		dropdown.SelectUsingVisibleValue(orgDD, orgName);
+		wait.waitForElementVisible(searchButton, 60, 10);
+		button.click(searchButton);
+		clickOnEditUserButtonWithXpath(userNameToEdit);
+	}
 	
-	
-	
+	public void searchUserAndClickOnEditButton(String orgName, String userName) throws InterruptedException
+	{
+		dropdown.SelectUsingVisibleValue(orgDD, orgName);
+		textBox.clearAndSendKeys(userNameInput, userName);
+		button.click(searchButton);
+		wait.handleStaleElement(userListTable, 5, 60);
+		clickOnEditUserButtonWithXpath(userName);
+		/*WebElement ele =driver.findElement(By.xpath("//input[contains(@id,'imgbtnEdit')]/parent::td/parent::tr//td[text()='"+userName+"']"));
+		System.out.println(ele);
+		button.click(ele);*/
+	}
 
-	
 	
 		
 	public void clickOnResetButton()
