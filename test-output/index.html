@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.harmony.qa.tests.UserListPageTest" hash-for-method="searchUserNameAndClickOnEditUserButton">searchUserNameAndClickOnEditUserButton</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.harmony.qa.tests.HomePageTest" hash-for-method="verifyTrainingPage">verifyTrainingPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -120,22 +120,19 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.harmony.qa.tests.UserListPageTest</span>
+              <span class="class-name">com.harmony.qa.tests.HomePageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="searchUserNameAndClickOnEditUserButton">
-                  </a> <!-- searchUserNameAndClickOnEditUserButton -->
-                  <span class="method-name">searchUserNameAndClickOnEditUserButton</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [https://dev.sharepoint.harmonyis.net/sites/admin/SitePages/ManageUsers.aspx?orgName=agingnetwork.com/ClientTest/Harmony/AD4RC/Groups/HAAD4RCUsers&amp;uName=QARC1] but found [https://dev.sharepoint.harmonyis.net/sites/admin/SitePages/UserList.aspx]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
-	at org.testng.Assert.assertEquals(Assert.java:115)
-	at org.testng.Assert.assertEquals(Assert.java:189)
-	at org.testng.Assert.assertEquals(Assert.java:199)
-	at com.harmony.qa.tests.UserListPageTest.searchUserNameAndClickOnEditUserButton(UserListPageTest.java:106)
+                  <a name="verifyTrainingPage">
+                  </a> <!-- verifyTrainingPage -->
+                  <span class="method-name">verifyTrainingPage</span>
+                  <div class="stack-trace">java.lang.IllegalArgumentException: No enum constant com.harmony.qa.constants.Links.WellSky Training Site
+	at java.lang.Enum.valueOf(Enum.java:238)
+	at com.harmony.qa.constants.Links.valueOf(Links.java:1)
+	at com.harmony.qa.pages.HomePage.navigationThroughChapters(HomePage.java:72)
+	at com.harmony.qa.tests.HomePageTest.verifyTrainingPage(HomePageTest.java:74)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -170,7 +167,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/cp/90hdv7tx3xn8x2qwyk0yq1s80000gn/T/testng-eclipse-708447745/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/cp/90hdv7tx3xn8x2qwyk0yq1s80000gn/T/testng-eclipse-678874599/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -179,7 +176,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.harmony.qa.tests.UserListPageTest&quot;/&gt;
+      &lt;class name=&quot;com.harmony.qa.tests.HomePageTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -221,14 +218,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'searchUserNameAndClickOnEditUserButton')
-data.setCell(0, 2, 'com.harmony.qa.tests.UserListPageTest')
-data.setCell(0, 3, 26218);
+data.setCell(0, 1, 'verifyTrainingPage')
+data.setCell(0, 2, 'com.harmony.qa.tests.HomePageTest')
+data.setCell(0, 3, 8);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 26 seconds</span>
+              <span class="suite-total-time">Total running time: 8 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -254,7 +251,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.harmony.qa.tests.UserListPageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.harmony.qa.tests.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
@@ -262,12 +259,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">searchUserNameAndClickOnEditUserButton</span>
-                <span class="method-start">41253 ms</span>
+                <span class="method-name">verifyTrainingPage</span>
+                <span class="method-start">41903 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">67474 ms</span>
+                <span class="method-start">41918 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

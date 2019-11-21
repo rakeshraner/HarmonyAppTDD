@@ -4,7 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.harmony.qa.base.TestBase;
 import com.harmony.qa.pages.HomePage;
 import com.harmony.qa.pages.LoginPage;
@@ -42,37 +41,38 @@ public class HomePageTest extends TestBase
 	@Test
 	public void verifyOrganizationPage()
 	{
-		homePage.clickOnOrganizationLink();
+		homePage.navigationThroughChapters("Manage_Organizations");
 		Assert.assertEquals(orgPage.orgnizationPageUrl(), prop.get("orgPageURL"));
 	}
 	
 	@Test
 	public void verifyUserPage()
 	{
-		homePage.clickOnUserLink();
+		homePage.navigationThroughChapters("Manage_Users");
 		Assert.assertEquals(userPage.userPageUrl(), prop.get("userPageURL"));
 	}
 	
 	@Test
 	public void verifyNewsPage()
 	{
-		homePage.clickOnNewsLink();
+		homePage.navigationThroughChapters("WellSky_News_Management");
 		Assert.assertEquals(newsPage.newsPageUrl(), prop.get("newsPageURL"));
 	}
 	
 	@Test
 	public void verifyPanelPage()
 	{
-		homePage.clickOnPanelLink();
+		homePage.navigationThroughChapters("Manage_Panels");
 		Assert.assertEquals(panelPage.panelPageUrl(), prop.get("panelPageURL"));
 	}
 	
 	@Test
 	public void verifyTrainingPage()
 	{
-		homePage.clickOnTrainingLink();
+		homePage.navigationThroughChapters("WellSky_Training_Site");
 		Assert.assertEquals(trainingPage.trainingPageUrl(), prop.get("trainingPageURL"));
 	}
+
 
 	@AfterMethod
 	public void teardown()

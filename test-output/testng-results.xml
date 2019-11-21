@@ -2,29 +2,26 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="67645" started-at="2019-11-12T13:21:18Z" finished-at="2019-11-12T13:22:25Z">
+  <suite name="Default suite" duration-ms="42137" started-at="2019-11-21T16:04:58Z" finished-at="2019-11-21T16:05:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="67645" started-at="2019-11-12T13:21:18Z" finished-at="2019-11-12T13:22:25Z">
-      <class name="com.harmony.qa.tests.UserListPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.harmony.qa.tests.UserListPageTest@598067a5]" name="setup" is-config="true" duration-ms="41253" started-at="2019-11-12T18:51:18Z" finished-at="2019-11-12T18:51:59Z">
+    <test name="Default test" duration-ms="42137" started-at="2019-11-21T16:04:58Z" finished-at="2019-11-21T16:05:40Z">
+      <class name="com.harmony.qa.tests.HomePageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.harmony.qa.tests.HomePageTest@598067a5]" name="setup" is-config="true" duration-ms="41903" started-at="2019-11-21T21:34:58Z" finished-at="2019-11-21T21:35:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="searchUserNameAndClickOnEditUserButton()[pri:0, instance:com.harmony.qa.tests.UserListPageTest@598067a5]" name="searchUserNameAndClickOnEditUserButton" duration-ms="26218" started-at="2019-11-12T18:51:59Z" finished-at="2019-11-12T18:52:25Z">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="verifyTrainingPage()[pri:0, instance:com.harmony.qa.tests.HomePageTest@598067a5]" name="verifyTrainingPage" duration-ms="8" started-at="2019-11-21T21:35:40Z" finished-at="2019-11-21T21:35:40Z">
+          <exception class="java.lang.IllegalArgumentException">
             <message>
-              <![CDATA[expected [https://dev.sharepoint.harmonyis.net/sites/admin/SitePages/ManageUsers.aspx?orgName=agingnetwork.com/ClientTest/Harmony/AD4RC/Groups/HAAD4RCUsers&uName=QARC1] but found [https://dev.sharepoint.harmonyis.net/sites/admin/SitePages/UserList.aspx]]]>
+              <![CDATA[No enum constant com.harmony.qa.constants.Links.WellSky Training Site]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [https://dev.sharepoint.harmonyis.net/sites/admin/SitePages/ManageUsers.aspx?orgName=agingnetwork.com/ClientTest/Harmony/AD4RC/Groups/HAAD4RCUsers&uName=QARC1] but found [https://dev.sharepoint.harmonyis.net/sites/admin/SitePages/UserList.aspx]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
-	at org.testng.Assert.assertEquals(Assert.java:115)
-	at org.testng.Assert.assertEquals(Assert.java:189)
-	at org.testng.Assert.assertEquals(Assert.java:199)
-	at com.harmony.qa.tests.UserListPageTest.searchUserNameAndClickOnEditUserButton(UserListPageTest.java:106)
+              <![CDATA[java.lang.IllegalArgumentException: No enum constant com.harmony.qa.constants.Links.WellSky Training Site
+	at java.lang.Enum.valueOf(Enum.java:238)
+	at com.harmony.qa.constants.Links.valueOf(Links.java:1)
+	at com.harmony.qa.pages.HomePage.navigationThroughChapters(HomePage.java:72)
+	at com.harmony.qa.tests.HomePageTest.verifyTrainingPage(HomePageTest.java:74)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -52,15 +49,15 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchUserNameAndClickOnEditUserButton -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.harmony.qa.tests.UserListPageTest@598067a5]" name="teardown" is-config="true" duration-ms="149" started-at="2019-11-12T18:52:25Z" finished-at="2019-11-12T18:52:25Z">
+        </test-method> <!-- verifyTrainingPage -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.harmony.qa.tests.HomePageTest@598067a5]" name="teardown" is-config="true" duration-ms="182" started-at="2019-11-21T21:35:40Z" finished-at="2019-11-21T21:35:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.harmony.qa.tests.UserListPageTest -->
+      </class> <!-- com.harmony.qa.tests.HomePageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

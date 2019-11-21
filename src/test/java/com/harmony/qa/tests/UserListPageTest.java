@@ -36,7 +36,7 @@ public class UserListPageTest extends TestBase
 		homePage.clickOnUserLink();
 	}
 	
-	/*@Test
+	@Test
 	public void clickOnAddUserWhenOrgIsNotSelected()
 	{
 		userPage.clickOnAddNewUserButton("Select");
@@ -97,7 +97,7 @@ public class UserListPageTest extends TestBase
 	{
 		userPage.clickOnEditUserButton("AD 4 RC", "QARC1");
 		Assert.assertEquals(driver.getCurrentUrl(), "https://dev.sharepoint.harmonyis.net/sites/admin/SitePages/ManageUsers.aspx?orgName=agingnetwork.com/ClientTest/Harmony/AD4RC/Groups/HAAD4RCUsers&uName=QARC1");
-	}*/
+	}
 
 	@Test
 	public void searchUserNameAndClickOnEditUserButton() throws InterruptedException 
@@ -105,8 +105,6 @@ public class UserListPageTest extends TestBase
 		userPage.searchUserAndClickOnEditButton("AD 4 RC", "QARC1");
 		Assert.assertEquals(driver.getCurrentUrl(), "https://dev.sharepoint.harmonyis.net/sites/admin/SitePages/ManageUsers.aspx?orgName=agingnetwork.com/ClientTest/Harmony/AD4RC/Groups/HAAD4RCUsers&uName=QARC1");
 	}
-	
-	
 	
 	
 	@AfterMethod

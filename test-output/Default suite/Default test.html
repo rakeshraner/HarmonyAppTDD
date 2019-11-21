@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Nov 12 18:51:18 IST 2019</td>
+<td>Started on:</td><td>Thu Nov 21 21:34:58 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>67 seconds (67645 ms)</td>
+<tr><td>Total time:</td><td>42 seconds (42137 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,15 +75,12 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.harmony.qa.tests.UserListPageTest.searchUserNameAndClickOnEditUserButton()'><b>searchUserNameAndClickOnEditUserButton</b><br>Test class: com.harmony.qa.tests.UserListPageTest</td>
-<td><div><pre>java.lang.AssertionError: expected [https://dev.sharepoint.harmonyis.net/sites/admin/SitePages/ManageUsers.aspx?orgName=agingnetwork.com/ClientTest/Harmony/AD4RC/Groups/HAAD4RCUsers&amp;uName=QARC1] but found [https://dev.sharepoint.harmonyis.net/sites/admin/SitePages/UserList.aspx]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
-	at org.testng.Assert.assertEquals(Assert.java:115)
-	at org.testng.Assert.assertEquals(Assert.java:189)
-	at org.testng.Assert.assertEquals(Assert.java:199)
-	at com.harmony.qa.tests.UserListPageTest.searchUserNameAndClickOnEditUserButton(UserListPageTest.java:106)
+<td title='com.harmony.qa.tests.HomePageTest.verifyTrainingPage()'><b>verifyTrainingPage</b><br>Test class: com.harmony.qa.tests.HomePageTest</td>
+<td><div><pre>java.lang.IllegalArgumentException: No enum constant com.harmony.qa.constants.Links.WellSky Training Site
+	at java.lang.Enum.valueOf(Enum.java:238)
+	at com.harmony.qa.constants.Links.valueOf(Links.java:1)
+	at com.harmony.qa.pages.HomePage.navigationThroughChapters(HomePage.java:72)
+	at com.harmony.qa.tests.HomePageTest.verifyTrainingPage(HomePageTest.java:74)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -109,15 +106,12 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace237344028", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace237344028'><pre>java.lang.AssertionError: expected [https://dev.sharepoint.harmonyis.net/sites/admin/SitePages/ManageUsers.aspx?orgName=agingnetwork.com/ClientTest/Harmony/AD4RC/Groups/HAAD4RCUsers&amp;uName=QARC1] but found [https://dev.sharepoint.harmonyis.net/sites/admin/SitePages/UserList.aspx]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
-	at org.testng.Assert.assertEquals(Assert.java:115)
-	at org.testng.Assert.assertEquals(Assert.java:189)
-	at org.testng.Assert.assertEquals(Assert.java:199)
-	at com.harmony.qa.tests.UserListPageTest.searchUserNameAndClickOnEditUserButton(UserListPageTest.java:106)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1408482749", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1408482749'><pre>java.lang.IllegalArgumentException: No enum constant com.harmony.qa.constants.Links.WellSky Training Site
+	at java.lang.Enum.valueOf(Enum.java:238)
+	at com.harmony.qa.constants.Links.valueOf(Links.java:1)
+	at com.harmony.qa.pages.HomePage.navigationThroughChapters(HomePage.java:72)
+	at com.harmony.qa.tests.HomePageTest.verifyTrainingPage(HomePageTest.java:74)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -144,8 +138,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>26</td>
-<td>com.harmony.qa.tests.UserListPageTest@598067a5</td></tr>
+<td>0</td>
+<td>com.harmony.qa.tests.HomePageTest@598067a5</td></tr>
 </table><p>
 </body>
 </html>
