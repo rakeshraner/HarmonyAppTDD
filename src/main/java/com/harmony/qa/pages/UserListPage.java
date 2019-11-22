@@ -1,10 +1,8 @@
 package com.harmony.qa.pages;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
+
 import com.harmony.qa.base.TestBase;
 import com.harmony.qa.utility.ButtonHelper;
 import com.harmony.qa.utility.DropdownHelper;
@@ -80,7 +78,7 @@ public class UserListPage extends TestBase
 		return new LicenseSummaryPage();
 	}
 
-	public void clickOnEditUserButtonWithXpath(String userName)
+	/*public void clickOnEditUserButtonWithXpath(String userName)
 	{
 		try 
 		{
@@ -104,28 +102,24 @@ public class UserListPage extends TestBase
 					jsHelper.scrollIntoViewAndClick(nextPageButtonInPagination);
 				}
 			}
-
-		} catch (Exception e) {
-
+		} catch (Exception e) 
+		{
 			log.info("Element Not found " + e.getMessage().toString());
 		}
-
-	}
+	}*/
 
 	public void clickOnEditUserButton(String orgName, String userNameToEdit)
 	{
 		dropdown.SelectUsingVisibleValue(orgDD, orgName);
-		wait.waitForElementVisible(searchButton, 60, 10);
-		button.click(searchButton);
-		clickOnEditUserButtonWithXpath(userNameToEdit);
+		driver.findElement(By.xpath("//table[@class='rgMasterTable']//td[text()='"+userNameToEdit+"']/parent::tr//td[@style='white-space:nowrap;']//input[contains(@id,'imgbtnEdit')]")).click();
 	}
 
-	public void searchUserAndClickOnEditButton(String orgName, String userName) throws InterruptedException
+	public void searchUserAndClickOnEditButton(String orgName, String userNameToEdit)
 	{
 		dropdown.SelectUsingVisibleValue(orgDD, orgName);
-		wait.handleStaleElement(userListTable, 5, 60);
-		clickOnEditUserButtonWithXpath(userName);
-		wait.elementExistAndVisible(editUserHeader, 60, 10);
+		textBox.clearAndSendKeys(userNameInput, userNameToEdit);
+		button.click(searchButton);
+		driver.findElement(By.xpath("//table[@class='rgMasterTable']//td[text()='"+userNameToEdit+"']/parent::tr//td[@style='white-space:nowrap;']//input[contains(@id,'imgbtnEdit')]")).click();
 	}
 
 	public void clickOnResetButton()

@@ -102,8 +102,8 @@ public class UserListPageTest extends TestBase
 	@Test
 	public void searchUserNameAndClickOnEditUserButton() throws InterruptedException 
 	{
-		userPage.searchUserAndClickOnEditButton("AD 4 RC", "QARC1");
-		Assert.assertEquals(driver.getCurrentUrl(), "https://dev.sharepoint.harmonyis.net/sites/admin/SitePages/ManageUsers.aspx?orgName=agingnetwork.com/ClientTest/Harmony/AD4RC/Groups/HAAD4RCUsers&uName=QARC1");
+		userPage.searchUserAndClickOnEditButton("AD 4 RC", "Test_User");
+		Assert.assertEquals(driver.getCurrentUrl(), "https://dev.sharepoint.harmonyis.net/sites/admin/SitePages/ManageUsers.aspx?orgName=agingnetwork.com/ClientTest/Harmony/AD4RC/Groups/HAAD4RCUsers&uName=Test_User");
 	}
 	
 	

@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.harmony.qa.tests.HomePageTest">
+      <class name="com.harmony.qa.tests.AddNewLicenseTest">
         <methods>
-          <include name="verifyTrainingPage"/>
-          <include name="teardown"/>
+          <include name="clickOnOrgEditButtonTest"/>
           <include name="setup"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.harmony.qa.tests.HomePageTest -->
+      </class> <!-- com.harmony.qa.tests.AddNewLicenseTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
