@@ -2,6 +2,9 @@ package com.harmony.qa.utility;
 
 import java.util.LinkedList;
 import java.util.Set;
+
+import org.openqa.selenium.By;
+
 import com.harmony.qa.base.TestBase;
 
 public class WindowHelper extends TestBase
@@ -32,9 +35,7 @@ public class WindowHelper extends TestBase
 
 	public void SwitchToWindow(int index)
 	{
-
-		LinkedList<String> windowsId = new LinkedList<String>(
-				getWindowHandlens());
+		LinkedList<String> windowsId = new LinkedList<String>(getWindowHandlens());
 		if (index < 0 || index > windowsId.size())
 			throw new IllegalArgumentException("Invalid Index : " + index);
 		driver.switchTo().window(windowsId.get(index));
@@ -43,8 +44,7 @@ public class WindowHelper extends TestBase
 
 	public void switchToParentWindow()
 	{
-		LinkedList<String> windowsId = new LinkedList<String>(
-				getWindowHandlens());
+		LinkedList<String> windowsId = new LinkedList<String>(getWindowHandlens());
 		driver.switchTo().window(windowsId.get(0));
 		log.info("Window has been switched to default");
 	}
@@ -52,8 +52,7 @@ public class WindowHelper extends TestBase
 	public void switchToParentWithChildClose()
 	{
 		switchToParentWindow();
-		LinkedList<String> windowsId = new LinkedList<String>(
-				getWindowHandlens());
+		LinkedList<String> windowsId = new LinkedList<String>(getWindowHandlens());
 		for (int i = 1; i < windowsId.size(); i++)
 		{
 			log.info(windowsId.get(i));
@@ -64,14 +63,13 @@ public class WindowHelper extends TestBase
 		switchToParentWindow();
 		log.info("Child Window has been closed and Window has been switched to default");
 	}
-
-	/*
-	 * public void switchToFrame(By locator) 
-	 * { 
-	 * driver.switchTo().frame(locator);
-	 * log.info(locator); 
-	 * }
-	 */
+	
+	 public void switchToFrame(By locator) 
+	  { 
+		 driver.switchTo().frame(driver.findElement(locator));
+		 log.info(locator); 
+	  }
+	 
 
 	public void switchToFrame(String nameOrId)
 	{
